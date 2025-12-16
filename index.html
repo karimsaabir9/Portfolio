@@ -1,187 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Css</title>
+  <title>Karim Sabir - Portfolio</title>
   <!-- Import Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="font-[Poppins]">
+<body class="font-[Poppins] antialiased">
 
-  
-
-  <nav class="max-w-6xl mx-auto text-black p-12 h-[17vh]">
+  <!-- nav -->
+  <nav class="max-w-6xl mx-auto text-black px-6 py-8 md:px-8 lg:p-12 min-h-[10vh]">
     <div class="flex justify-between items-center">
-      <div class="font-semibold text-3xl text-gray-700">KarimSabir9️⃣</div>
-      <div>
-        <ul class="flex space-x-8 capitalize text-gray-700 text-2xl">
-          <li><a href="#about" class="hover:text-gray-500 hover:underline">about</a></li>
-          <li><a href="#experience" class="hover:text-gray-500 hover:underline">experience</a></li>
-          <li><a href="#project" class="hover:text-gray-500 hover:underline">projects</a></li>
-          <li><a href="#contact" class="hover:text-gray-500 hover:underline">contact</a></li>
+      <!-- Logo -->
+      <div class="font-semibold text-2xl md:text-3xl text-gray-700">KarimSabir9️⃣</div>
+      <div class="hidden lg:block">
+        <ul class="flex space-x-6 lg:space-x-8 capitalize text-gray-700 text-lg lg:text-2xl">
+          <li><a href="#about"
+              class="hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2">about</a>
+          </li>
+          <li><a href="#experience"
+              class="hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2">experience</a>
+          </li>
+          <li><a href="#project"
+              class="hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2">projects</a>
+          </li>
+          <li><a href="#contact"
+              class="hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2">contact</a>
+          </li>
         </ul>
       </div>
+
+      <!-- icon -->
+      <div class="lg:hidden">
+        <button id="menu-btn" class="text-3xl focus:outline-none cursor-pointer">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile/Tablet Menu Dropdown -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden flex-col items-center mt-4 space-y-4 bg-white shadow-lg rounded-lg p-6 border border-gray-200">
+      <a href="#about" class="text-xl text-gray-700 hover:text-gray-500" onclick="toggleMenu()">About</a>
+      <a href="#experience" class="text-xl text-gray-700 hover:text-gray-500" onclick="toggleMenu()">Experience</a>
+      <a href="#project" class="text-xl text-gray-700 hover:text-gray-500" onclick="toggleMenu()">Projects</a>
+      <a href="#contact" class="text-xl text-gray-700 hover:text-gray-500" onclick="toggleMenu()">Contact</a>
     </div>
   </nav>
 
-
+  <!-- hero section -->
   <section
-    class="max-w-6xl mx-auto flex items-center justify-center gap-20 h-[80vh] pt-[4vh] mx-[10rem] my-0 min-h-fit">
-    <div class="h-[400px] w-[400px] my-auto overflow-clip rounded-full shadow-lg ">
-      <img src="/images/s.JPG" alt="Sabir">
+    class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-12 lg:gap-20 min-h-[80vh] px-6 py-4">
+    <!-- Image -->
+    <div
+      class="h-[300px] w-[300px] my-auto overflow-clip rounded-full md:h-[320px] md:w-[320px] lg:h-[400px] lg:w-[400px] shadow-lg shrink-0">
+      <img src="/images/s.JPG" alt="Sabir" class="object-cover">
     </div>
-    <div class="self-center text-center">
-      <p class="font-semibold text-[#555555] mt-4 mb-4">Hello, I'm</p>
-      <h1 class="text-5xl mt-3 mb-3 font-bold">Karim Sabir</h1>
-      <h2 class="font-semibold text-[1.75rem] text-[#555555] mt-4 mb-4">Frontend Developer
-        <h2 />
-        <div class="flex justify-center gap-4">
-          <a href="https://www.instagram.com/karimsaabir9/"
-            class="font-semibold transition-all duration-300 ease-in-out p-4 w-40 rounded-full border border-gray-800 hover:bg-gray-800 hover:text-white cursor-pointer">
-            Download CV
-          </a>
-          <a href="contact"
-            class="bg-[#353535] text-white font-semibold transition-all duration-300 ease-in-out p-4 w-40 rounded-[2rem] border border-[#353535] hover:bg-gray-700 cursor-pointer inline-flex items-center justify-center">
-            Contact Info
-          </a>
-        </div>
 
-        <div class="flex justify-center mt-4 gap-4">
-          <img src="/images/linkedin-in-brands-solid-full.svg" alt="My LinkedIn profile" class="h-8 cursor-pointer"
-            onclick="location.href='https://www.linkedin.com/in/sabir-salad-hassan-36260819a/'" />
-          <img src="/images/github-brands-solid-full.svg" alt="My Github profile" class="h-8 cursor-pointer"
-            onclick="location.href='https://github.com/karimsaabir'" />
-        </div>
+    <!-- Text -->
+    <div class="text-center md:text-left">
+      <p class="font-semibold text-[#555555] mb-2 text-center">Hello, I'm</p>
+      <h1 class="text-4xl md:text-5xl mb-3 font-bold text-center">Karim Sabir</h1>
+      <h2 class="font-semibold text-2xl md:text-[1.75rem] text-[#555555] mb-4 text-center">Frontend Developer</h2>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+        <a href="https://www.instagram.com/karimsaabir9/"
+          class="font-semibold transition-all duration-300 ease-in-out p-4 w-36 md:w-40 rounded-full border border-gray-800 hover:bg-gray-800 hover:text-white cursor-pointer mx-auto sm:mx-0 text-center">
+          Download CV
+        </a>
+        <a href="#contact"
+          class="bg-[#353535] text-white font-semibold transition-all duration-300 ease-in-out p-4 w-36 md:w-40 rounded-full border border-[#353535] hover:bg-black cursor-pointer mx-auto sm:mx-0 inline-flex items-center justify-center">
+          Contact Info
+        </a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex justify-center mt-4 gap-6">
+        <a href="https://www.linkedin.com/in/sabir-salad-hassan-36260819a/" target="_blank">
+          <img src="/images/linkedin-in-brands-solid-full.svg" alt="LinkedIn"
+            class="h-8 w-8 cursor-pointer hover:scale-110 transition-transform" />
+        </a>
+        <a href="https://github.com/karimsaabir" target="_blank">
+          <img src="/images/github-brands-solid-full.svg" alt="Github"
+            class="h-8 w-8 cursor-pointer hover:scale-110 transition-transform" />
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- About me -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-12 min-h-screen flex flex-col justify-center">
+    <p class="text-center text-[#555555] block my-2">Get To Know More</p>
+    <h1 class="text-3xl md:text-[3rem] text-center mb-8 md:mb-12 font-bold">About Me</h1>
 
-  <section id="about" class="max-w-6xl mx-auto px-4 md:px-10 py-12">
-    <p class="text-center text-[#555555] block my-4 mx-0">Get To Know More</p>
-    <h1 class="text-[3rem] text-center my-3 mx-0 font-bold">About Me</h1>
-    <div class="flex gap-16 ">
-      <div class="shrink-0 w-80 h-80">
-        <img src="/images/saa.JPG" class="rounded-[2rem] overflow-clip" alt="photo">
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+      <!-- About Image -->
+      <div class="shrink-0 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
+        <img src="/images/saa.JPG" class="rounded-[2rem] object-cover shadow-lg" alt="photo">
       </div>
-      <div class="flex flex-col justify-center">
-        <div class="flex gap-8 my-8 justify-center items-center text-center">
+
+      <!-- About Content -->
+      <div class="flex flex-col justify-center w-full ">
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20 lg:mt-0 mb-8 w-full">
           <div
-            class="flex-1 p-6 pb-8 justify-center bg-white rounded-[2rem] border border-[#a3a3a3]  shadow hover:shadow-lg transition-shadow">
-            <img src="/images/certificate-solid-full.svg" class="mx-auto cursor-pointer w-8 h-8 overflow-clip" alt="">
-            <h3 class="block text-[1.17em] my-2 mx-0 font-bold">Experience</h3>
-            <p class="block text-[#555555] ">2+ years <br> Frontend Development</p>
+            class="p-6 text-center bg-white rounded-[2rem] border border-[#a3a3a3] shadow hover:shadow-lg transition-shadow">
+            <img src="/images/certificate-solid-full.svg" class="mx-auto w-8 h-8 mb-2" alt="Experience Icon">
+            <h3 class="font-bold text-lg">Experience</h3>
+            <p class="text-[#555555] text-sm md:text-base">2+ years <br> Frontend Development</p>
           </div>
           <div
-            class="flex-1 p-6 pb-8 justify-center bg-white rounded-[2rem] border border-[#a3a3a3]  shadow hover:shadow-lg transition-shadow">
-            <img src="/images/user-group-solid-full.svg" class="mx-auto cursor-pointer w-8 h-8 overflow-clip" alt="">
-            <h3 class="block text-[1.17em] my-2 mx-0 font-bold">Education</h3>
-            <p class="block text-[#555555]">B.Sc. in Computer Science <br> at University of Somalia(UNISO)</p>
+            class="p-6 text-center bg-white rounded-[2rem] border border-[#a3a3a3] shadow hover:shadow-lg transition-shadow">
+            <img src="/images/user-group-solid-full.svg" class="mx-auto w-8 h-8 mb-2" alt="Education Icon">
+            <h3 class="font-bold text-lg">Education</h3>
+            <p class="text-[#555555] text-sm md:text-base">B.Sc. in Computer Science <br> University of Somalia</p>
           </div>
         </div>
-        <div class="text-gray-600">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis reprehenderit et laborum, rem, dolore
-            eum quod voluptate exercitationem nobis, nihil esse debitis maxime facere minus sint delectus velit in eos
-            quo officiis explicabo deleniti dignissimos. Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-            reiciendis ea magnam? Nulla, impedit fuga!</p>
+
+        <!-- Text -->
+        <div class="text-gray-600 text-justify leading-relaxed">
+          <p>"I am a dedicated Frontend Developer with over 2 years of professional experience in building responsive
+            and user-friendly websites. Holding a B.Sc. in Computer Science from the University of Somalia (UNISO), I
+            specialize in transforming design concepts into functional code using modern technologies like JavaScript,
+            TypeScript, and Tailwind CSS. I am passionate about writing clean code and delivering high-quality web
+            solutions."</p>
         </div>
       </div>
     </div>
   </section>
 
 
-  <section id="experience" class="max-w-6xl mx-auto mt-12 px-4 md:px-10 py-12">
-    <p class="text-center text-[#555555] block my-2 mx-0">Explore My</p>
-    <h1 class="text-[3rem] text-center my-2 mx-0 mb-12 font-bold">Experience</h1>
-    <div class="grid grid-cols-2 gap-8 my-8">
+  <!-- Experience Section -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-12 mb-12  min-h-screen flex flex-col justify-center">
+    <p class="text-center text-[#555555] block my-2">Explore My</p>
+    <h1 class="text-3xl md:text-[3rem] text-center mb-12 font-bold">Experience</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Frontend Card -->
       <div
-        class="p-6 flex-1 bg-white rounded-3xl border border-gray-400 text-center  shadow hover:shadow-lg transition-shadow">
+        class="p-8 bg-white rounded-[2rem] border border-gray-400 text-center shadow hover:shadow-lg transition-shadow">
         <h2 class="text-gray-700 font-semibold text-2xl mb-8">Frontend Development</h2>
-        <div class="grid grid-cols-2 grid-row  gap-10 justify-around text-start">
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8" alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">HTML</h3>
-              <p class="text-gray-700">Experienced</p>
+
+        <div
+          class="grid grid-cols-1 gap-y-6 justify-items-center w-full lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8 lg:justify-items-start lg:px-4">
+
+          <!-- HTML -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">HTML</h3>
+              <p class="text-gray-500 text-sm">Experienced</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">CSS</h3>
-              <p class="text-gray-700">Experienced</p>
+          </article>
+
+          <!-- CSS -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">CSS</h3>
+              <p class="text-gray-500 text-sm">Experienced</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">SASS</h3>
-              <p class="text-gray-700">Experienced</p>
+          </article>
+
+          <!-- SASS -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">SASS</h3>
+              <p class="text-gray-500 text-sm">Intermediate</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">JavaScript</h3>
-              <p class="text-gray-700">Experienced</p>
+          </article>
+
+          <!-- JavaScript -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">JavaScript</h3>
+              <p class="text-gray-500 text-sm">Experienced</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">TypeScript</h3>
-              <p class="text-gray-700">Experienced</p>
+          </article>
+
+          <!-- TypeScript -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">TypeScript</h3>
+              <p class="text-gray-500 text-sm">Basic</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">Material UI</h3>
-              <p class="text-gray-700">Experienced</p>
+          </article>
+
+          <!-- Material UI -->
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">Material UI</h3>
+              <p class="text-gray-500 text-sm">Intermediate</p>
             </div>
-          </div>
+          </article>
+
         </div>
       </div>
+
+      <!-- Backend Card -->
       <div
-        class="p-6 flex-1 bg-white rounded-3xl border border-gray-400 text-center  shadow hover:shadow-lg transition-shadow">
-        <h2 class="text-gray-700 font-semibold text-2xl mb-8">Frontend Development</h2>
-        <div class="grid grid-cols-2 grid-row  gap-10 justify-around text-start">
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">PostgreSQL</h3>
-              <p class="text-gray-700">Basic</p>
+        class="p-8 bg-white rounded-[2rem] border border-gray-400 text-center shadow hover:shadow-lg transition-shadow">
+        <h2 class="text-gray-700 font-semibold text-2xl mb-8">Backend Development</h2>
+
+        <!-- INNER GRID -->
+        <div
+          class="grid grid-cols-1 gap-y-6 justify-items-center w-full lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8 lg:justify-items-start lg:px-4">
+
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">PostgreSQL</h3>
+              <p class="text-gray-500 text-sm">Basic</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">Node JS</h3>
-              <p class="text-gray-700">Intermediate</p>
+          </article>
+
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">Node JS</h3>
+              <p class="text-gray-500 text-sm">Intermediate</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">Express JS</h3>
-              <p class="text-gray-700">Intermediate</p>
+          </article>
+
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">Express JS</h3>
+              <p class="text-gray-500 text-sm">Intermediate</p>
             </div>
-          </div>
-          <div class="flex w-40 justify-around gap-2">
-            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-8 " alt="">
-            <div>
-              <h3 class="text-lg  font-semibold">Git</h3>
-              <p class="text-gray-700">Intermediate</p>
+          </article>
+
+          <article class="flex w-40 sm:w-44 lg:w-auto gap-3 items-start">
+            <img src="https://tangerine-hummingbird-1479b6.netlify.app/assets/checkmark.png" class="h-6 mt-1"
+              alt="Check">
+            <div class="text-left">
+              <h3 class="text-lg font-bold leading-tight">Git</h3>
+              <p class="text-gray-500 text-sm">Intermediate</p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
+
+    </div>
   </section>
 
+
+  <!-- Script for Mobile Menu -->
+  <script src="script.js"></script>
 </body>
 
 </html>
