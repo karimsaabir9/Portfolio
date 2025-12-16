@@ -316,8 +316,7 @@
       <div
         class="p-6 bg-white rounded-[2rem] border border-gray-400 text-center shadow hover:shadow-lg transition-shadow">
         <div class="h-80 w-full rounded-[2rem] overflow-hidden mb-6 border border-gray-200">
-          <img src="/images/project three.png"
-            alt="Project 3" class="w-full h-full object-cover">
+          <img src="/images/project three.png" alt="Project 3" class="w-full h-full object-cover">
         </div>
         <h2 class="text-2xl font-bold mb-4">Project Three</h2>
         <div class="flex justify-center gap-4">
@@ -334,6 +333,63 @@
 
     </div>
   </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-12 min-h-screen flex flex-col justify-center items-center">
+    <p class="text-center text-[#555555] text-lg mb-2">Get in Touch</p>
+    <h1 class="text-3xl md:text-[3rem] text-center mb-8 font-bold">Contact Me</h1>
+
+    <!-- Contact Container Box -->
+    <div
+      class="flex flex-col md:flex-row justify-center items-center gap-8 border border-[#a3a3a3] rounded-[2rem] p-6 md:px-10 bg-white shadow-sm">
+
+      <!-- Email Item -->
+      <div class="flex items-center gap-4 group cursor-pointer hover:text-gray-600 transition-colors">
+        <div
+          class="bg-black text-white p-2 rounded-full h-8 w-8 flex items-center justify-center group-hover:bg-gray-700">
+          <i class="fa-solid fa-envelope text-sm"></i>
+        </div>
+        <a href="mailto:karimsaabir@gmail.com" class="text-xl md:text-xl font-medium">Example@gmail.com</a>
+      </div>
+
+      <!-- LinkedIn Item -->
+      <div class="flex items-center gap-4 group cursor-pointer hover:text-gray-600 transition-colors">
+        <div
+          class="bg-black text-white p-2 rounded-full h-8 w-8 flex items-center justify-center group-hover:bg-gray-700">
+          <i class="fa-brands fa-linkedin-in text-sm"></i>
+        </div>
+        <a href="https://www.linkedin.com/in/sabir-salad-hassan-36260819a/" target="_blank"
+          class="text-xl md:text-xl font-medium">LinkedIn</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Navigation -->
+  <footer class="max-w-6xl mx-auto px-6 pb-12">
+    <!-- Links -->
+    <nav class="flex flex-wrap justify-center gap-8 mb-8">
+      <a href="#about"
+        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">About</a>
+      <a href="#experience"
+        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Experience</a>
+      <a href="#project"
+        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Projects</a>
+      <a href="#contact"
+        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Contact</a>
+    </nav>
+
+    <!-- Copyright -->
+    <p class="text-center text-[#555555] text-sm">
+      Copyright &#169; <span id="year"></span> Karim Sabir. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- Script to update Year automatically -->
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+
   <!-- Script for Mobile Menu -->
   <script src="script.js"></script>
 </body>
