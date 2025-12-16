@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karim Sabir - Portfolio</title>
-  <!-- Import Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -269,7 +268,7 @@
     <p class="text-center text-[#555555] block my-2">Browse My Recent</p>
     <h1 class="text-3xl md:text-[3rem] text-center mb-12 font-bold">Projects</h1>
 
-    <!-- Grid Layout: Mobile (1), Tablet (2), Laptop (3) -->
+    <!-- Grid Layout-->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Project One -->
@@ -335,60 +334,49 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-12 min-h-screen flex flex-col justify-center items-center">
+  <section id="contact" class="max-w-6xl mx-auto min-h-[50vh] px-4 py-12 flex flex-col justify-center items-center">
     <p class="text-center text-[#555555] text-lg mb-2">Get in Touch</p>
     <h1 class="text-3xl md:text-[3rem] text-center mb-8 font-bold">Contact Me</h1>
 
     <!-- Contact Container Box -->
     <div
-      class="flex flex-col md:flex-row justify-center items-center gap-8 border border-[#a3a3a3] rounded-[2rem] p-6 md:px-10 bg-white shadow-sm">
+      class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 border border-gray-400 rounded-[2rem] p-4 py-6 px-6 bg-white shadow-sm w-fit mx-auto">
 
       <!-- Email Item -->
-      <div class="flex items-center gap-4 group cursor-pointer hover:text-gray-600 transition-colors">
-        <div
-          class="bg-black text-white p-2 rounded-full h-8 w-8 flex items-center justify-center group-hover:bg-gray-700">
-          <i class="fa-solid fa-envelope text-sm"></i>
+      <div class="flex items-center gap-2">
+        <div class="bg-black text-white rounded-full h-8 w-8 flex items-center justify-center text-sm">
+          <i class="fa-solid fa-envelope"></i>
         </div>
-        <a href="mailto:karimsaabir@gmail.com" class="text-xl md:text-xl font-medium">Example@gmail.com</a>
+        <a href="mailto:karimsaabir@gmail.com"
+          class="text-sm sm:text-xl font-medium text-gray-800">Example@gmail.com</a>
       </div>
 
       <!-- LinkedIn Item -->
-      <div class="flex items-center gap-4 group cursor-pointer hover:text-gray-600 transition-colors">
-        <div
-          class="bg-black text-white p-2 rounded-full h-8 w-8 flex items-center justify-center group-hover:bg-gray-700">
-          <i class="fa-brands fa-linkedin-in text-sm"></i>
+      <div class="flex items-center gap-2">
+        <div class="bg-black text-white rounded-full h-8 w-8 flex items-center justify-center text-sm">
+          <i class="fa-brands fa-linkedin-in"></i>
         </div>
         <a href="https://www.linkedin.com/in/sabir-salad-hassan-36260819a/" target="_blank"
-          class="text-xl md:text-xl font-medium">LinkedIn</a>
+          class="text-sm sm:text-xl font-medium text-gray-800">LinkedIn</a>
       </div>
 
     </div>
   </section>
 
   <!-- Footer Navigation -->
-  <footer class="max-w-6xl mx-auto px-6 pb-12">
-    <!-- Links -->
-    <nav class="flex flex-wrap justify-center gap-8 mb-8">
-      <a href="#about"
-        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">About</a>
-      <a href="#experience"
-        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Experience</a>
-      <a href="#project"
-        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Projects</a>
-      <a href="#contact"
-        class="text-2xl text-gray-700 hover:text-gray-500 hover:underline decoration-gray-500 underline-offset-8 decoration-2 capitalize">Contact</a>
+  <footer class="max-w-6xl mx-auto px-6 pb-12 mt-8">
+    <nav class="flex flex-col items-center gap-4 mb-8">
+      <a href="#about" class="text-xl text-gray-700 hover:text-gray-500 capitalize">About</a>
+      <a href="#experience" class="text-xl text-gray-700 hover:text-gray-500 capitalize">Experience</a>
+      <a href="#project" class="text-xl text-gray-700 hover:text-gray-500 capitalize">Projects</a>
+      <a href="#contact" class="text-xl text-gray-700 hover:text-gray-500 capitalize">Contact</a>
     </nav>
 
     <!-- Copyright -->
-    <p class="text-center text-[#555555] text-sm">
-      Copyright &#169; <span id="year"></span> Karim Sabir. All Rights Reserved.
+    <p class="text-center text-[#555555] text-sm px-4">
+      Copyright &#169; <span id="year"></span> KarimSabir. All Rights Reserved.
     </p>
   </footer>
-
-  <!-- Script to update Year automatically -->
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
 
   <!-- Script for Mobile Menu -->
   <script src="script.js"></script>
