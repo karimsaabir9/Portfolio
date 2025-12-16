@@ -136,7 +136,7 @@
 
 
   <!-- Experience Section -->
-  <section id="experience" class="max-w-6xl mx-auto px-6 py-12 mb-12  min-h-screen flex flex-col justify-center">
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-12 mb-12 min-h-screen flex flex-col justify-center">
     <p class="text-center text-[#555555] block my-2">Explore My</p>
     <h1 class="text-3xl md:text-[3rem] text-center mb-12 font-bold">Experience</h1>
 
@@ -365,7 +365,8 @@
 
   <!-- Footer Navigation -->
   <footer class="max-w-6xl mx-auto px-6 pb-12 mt-8">
-    <nav class="flex flex-col items-center gap-4 mb-8">
+    <!-- Links: Responsive Flex (Vertical on Mobile, Horizontal on Tablet/Desktop) -->
+    <nav class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 mb-8">
       <a href="#about" class="text-xl text-gray-700 hover:text-gray-500 capitalize">About</a>
       <a href="#experience" class="text-xl text-gray-700 hover:text-gray-500 capitalize">Experience</a>
       <a href="#project" class="text-xl text-gray-700 hover:text-gray-500 capitalize">Projects</a>
@@ -380,6 +381,7 @@
 
   <!-- Script for Mobile Menu -->
   <script src="script.js"></script>
+
 </body>
 
 </html>
