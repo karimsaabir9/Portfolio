@@ -41,10 +41,10 @@ const Experience = () => {
   const frontendSkills = [
     { name: 'HTML', level: 'Experienced' },
     { name: 'CSS', level: 'Experienced' },
-    { name: 'SASS', level: 'Intermediate' },
     { name: 'JavaScript', level: 'Experienced' },
-    { name: 'TypeScript', level: 'Basic' },
-    { name: 'Material UI', level: 'Intermediate' },
+    { name: 'Tailwind CSS', level: 'Experienced' },
+    { name: 'TypeScript', level: 'Intermediate' },
+    { name: 'Next.js', level: 'Intermediate' },
   ];
 
   const backendSkills = [

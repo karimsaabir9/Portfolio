@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="flex items-center gap-3">
           <i className="fa-solid fa-envelope text-2xl dark:text-gray-300"></i>
           <a
-            href="mailto:Karimsaabir9@gmail.com"
+            href="mailto:karimsapir9@gmail.com"
             className="text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             karimsapir9@gmail.com

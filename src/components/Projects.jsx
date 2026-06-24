@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -40,11 +40,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               />
             </div>
 
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">{project.title}</h2>
-            
+            <h2 className="text-3xl font-bold mb-4 dark:text-white">
+              {project.title}
+            </h2>
+
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tech?.map((t) => (
-                <span key={t} className="px-4 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                <span
+                  key={t}
+                  className="px-4 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                >
                   {t}
                 </span>
               ))}
@@ -85,7 +90,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
 const ProjectCard = ({ project, index, onOpen }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -101,11 +106,18 @@ const ProjectCard = ({ project, index, onOpen }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <span className="bg-white/90 px-6 py-2 rounded-full font-bold text-black shadow-lg">View Details</span>
+          <span className="bg-white/90 px-6 py-2 rounded-full font-bold text-black shadow-lg">
+            View Details
+          </span>
         </div>
       </div>
-      <h2 className="text-2xl font-bold mb-4 dark:text-white">{project.title}</h2>
-      <div className="flex justify-center gap-4" onClick={(e) => e.stopPropagation()}>
+      <h2 className="text-2xl font-bold mb-4 dark:text-white">
+        {project.title}
+      </h2>
+      <div
+        className="flex justify-center gap-4"
+        onClick={(e) => e.stopPropagation()}
+      >
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -136,28 +148,41 @@ const Projects = () => {
 
   const projectsData = [
     {
-      image: '/images/Photo One.png',
-      title: 'Blogify CMS',
-      description: 'A modern full-stack content management system built with React, Supabase, and Tailwind CSS. It features a rich text editor, image uploads, and real-time database updates.',
-      tech: ['React', 'Supabase', 'Tailwind', 'Framer Motion'],
-      githubUrl: 'https://github.com/karimsaabir9/Blogify-A-Modern-Full-Stack-Content-Management-System-with-Supabase',
-      liveUrl: 'https://blogify-a-modern-full-stack-content-pied.vercel.app/',
+      image: "/images/Photo One.png",
+      title: "Blogify CMS",
+      description:
+        "A modern full-stack content management system built with React, Supabase, and Tailwind CSS. It features a rich text editor, image uploads, and real-time database updates.",
+      tech: ["React", "Supabase", "Tailwind", "Framer Motion"],
+      githubUrl:
+        "https://github.com/karimsaabir9/Blogify-A-Modern-Full-Stack-Content-Management-System-with-Supabase",
+      liveUrl: "https://blogify-a-modern-full-stack-content-pied.vercel.app/",
     },
     {
-      image: '/images/Photo Three.png',
-      title: 'Dynamic Clock',
-      description: 'An interactive clock application that shows real-time updates with smooth animations. Designed with a clean UI focus and modern aesthetics.',
-      tech: ['JavaScript', 'HTML5', 'CSS3', 'Animation'],
-      githubUrl: 'https://github.com/karimsaabir9/Clock',
-      liveUrl: 'https://clock-smoky-six.vercel.app/',
+      image: "/images/Photo Three.png",
+      title: "Pomodoro",
+      description:
+        "A modern Pomodoro timer application that helps users stay focused, track work sessions, and build consistent productivity habits through structured work and break intervals.",
+      tech: [
+        "Next.js 16",
+        "tRPC ",
+        "Better Auth",
+        "Drizzle ORM",
+        "Neon",
+        "TanStack Query",
+        "Tailwind CSS",
+        "shadcn/ui",
+      ],
+      githubUrl: "https://github.com/karimsaabir9/Pomodoro",
+      liveUrl: "https://pomodoro-sand-pi-68.vercel.app/",
     },
     {
-      image: '/images/Photo Two.png',
-      title: 'Uni Technology',
-      description: 'A professional business website for a technology company, featuring responsive layouts, service showcases, and a contact system.',
-      tech: ['React', 'Vite', 'Tailwind CSS', 'Responsive Design'],
-      githubUrl: 'https://github.com/karimsaabir9/Uni-Technology',
-      liveUrl: 'https://uni-technology.vercel.app/',
+      image: "/images/Photo Two.png",
+      title: "Uni Technology",
+      description:
+        "A professional business website for a technology company, featuring responsive layouts, service showcases, and a contact system.",
+      tech: ["React", "Vite", "Tailwind CSS", "Responsive Design"],
+      githubUrl: "https://github.com/karimsaabir9/Uni-Technology",
+      liveUrl: "https://uni-technology.vercel.app/",
     },
   ];
 
