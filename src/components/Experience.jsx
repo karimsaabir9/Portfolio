@@ -40,24 +40,24 @@ const SkillCard = ({ title, skills, delay }) => {
 const Experience = () => {
   const frontendSkills = [
     { name: 'React', level: 'Experienced' },
-    { name: 'Next.js', level: 'Experienced' },
-    { name: 'TypeScript', level: 'Experienced' },
     { name: 'JavaScript', level: 'Experienced' },
-    { name: 'Tailwind CSS', level: 'Experienced' },
     { name: 'HTML & CSS', level: 'Experienced' },
-    { name: 'shadcn/ui', level: 'Experienced' },
-    { name: 'Framer Motion', level: 'Experienced' },
+    { name: 'Tailwind CSS', level: 'Experienced' },
+    { name: 'Next.js', level: 'Intermediate' },
+    { name: 'TypeScript', level: 'Intermediate' },
+    { name: 'shadcn/ui', level: 'Intermediate' },
+    { name: 'Framer Motion', level: 'Intermediate' },
   ];
 
   const backendSkills = [
     { name: 'Node.js', level: 'Experienced' },
     { name: 'Express.js', level: 'Experienced' },
-    { name: 'REST APIs', level: 'Experienced' },
-    { name: 'MongoDB', level: 'Experienced' },
     { name: 'Git & GitHub', level: 'Experienced' },
-    { name: 'PostgreSQL', level: 'Experienced' },
-    { name: 'Supabase', level: 'Experienced' },
-    { name: 'Vercel Deploy', level: 'Experienced' },
+    { name: 'REST APIs', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Intermediate' },
+    { name: 'PostgreSQL', level: 'Intermediate' },
+    { name: 'Supabase', level: 'Intermediate' },
+    { name: 'Vercel Deploy', level: 'Intermediate' },
   ];
 
   return (
