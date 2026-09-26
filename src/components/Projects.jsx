@@ -70,16 +70,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               >
                 Github Source
               </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 bg-black dark:bg-white text-white dark:text-black font-bold py-4 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all"
-              >
-                Live Demo
-              </motion.a>
+              {project.liveUrl && (
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-black dark:bg-white text-white dark:text-black font-bold py-4 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all"
+                >
+                  Live Demo
+                </motion.a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -128,16 +130,18 @@ const ProjectCard = ({ project, index, onOpen }) => {
         >
           Github
         </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold transition-all duration-300 ease-in-out p-3 px-6 rounded-full border border-gray-800 dark:border-gray-200 dark:text-white hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black cursor-pointer"
-        >
-          Live
-        </motion.a>
+        {project.liveUrl && (
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold transition-all duration-300 ease-in-out p-3 px-6 rounded-full border border-gray-800 dark:border-gray-200 dark:text-white hover:bg-gray-800 hover:text-white dark:hover:bg-gray-200 dark:hover:text-black cursor-pointer"
+          >
+            Live
+          </motion.a>
+        )}
       </div>
     </motion.div>
   );
@@ -146,6 +150,9 @@ const ProjectCard = ({ project, index, onOpen }) => {
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // NOTE: To add screenshots for new projects, drop files into public/images/
+  // named "Photo Four.png", "Photo Five.png" etc. and update the image path below.
+  // Set liveUrl to null (or omit) if a project is not yet deployed — the "Live" button hides.
   const projectsData = [
     {
       image: "/images/Photo One.png",
@@ -164,7 +171,7 @@ const Projects = () => {
         "A modern Pomodoro timer application that helps users stay focused, track work sessions, and build consistent productivity habits through structured work and break intervals.",
       tech: [
         "Next.js 16",
-        "tRPC ",
+        "tRPC",
         "Better Auth",
         "Drizzle ORM",
         "Neon",
@@ -177,12 +184,39 @@ const Projects = () => {
     },
     {
       image: "/images/Photo Two.png",
-      title: "Uni Technology",
+      title: "AI Image Editor",
       description:
-        "A professional business website for a technology company, featuring responsive layouts, service showcases, and a contact system.",
-      tech: ["React", "Vite", "Tailwind CSS", "Responsive Design"],
-      githubUrl: "https://github.com/karimsaabir9/Uni-Technology",
-      liveUrl: "https://uni-technology.vercel.app/",
+        "An AI-powered image editing and generation web app that runs Google's image models through Replicate. Users submit prompts, the app orchestrates the async job, polls until the result is ready and renders the generated image inline.",
+      tech: ["Next.js", "TypeScript", "Replicate", "Google Image Models", "Tailwind CSS"],
+      githubUrl: "https://github.com/karimsaabir9/ai-image-editor",
+      liveUrl: null,
+    },
+    {
+      image: "/images/Photo One.png",
+      title: "Multi-Agent System",
+      description:
+        "A Next.js application that orchestrates multiple LLM agents through Inngest's durable workflows. Agents plan, delegate to tools and hand results back to the user, with retry-safe execution built in.",
+      tech: ["Next.js", "TypeScript", "Inngest", "LLM Tool Calling"],
+      githubUrl: "https://github.com/karimsaabir9/multi-agent-system",
+      liveUrl: null,
+    },
+    {
+      image: "/images/Photo Three.png",
+      title: "RAG Project",
+      description:
+        "A retrieval-augmented generation pipeline that ingests documents, chunks and embeds them, retrieves the most relevant chunks for each query, and grounds LLM answers in that context.",
+      tech: ["TypeScript", "Vector Search", "LLM", "RAG"],
+      githubUrl: "https://github.com/karimsaabir9/rag_project",
+      liveUrl: null,
+    },
+    {
+      image: "/images/Photo Two.png",
+      title: "Online Voting System",
+      description:
+        "A full-stack web application for running secure online elections, with voter registration, ballot casting, live tallying and separated admin and voter surfaces.",
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Authentication"],
+      githubUrl: "https://github.com/karimsaabir9/Online-Voting-System",
+      liveUrl: null,
     },
   ];
 

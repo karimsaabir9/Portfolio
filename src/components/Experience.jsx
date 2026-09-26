@@ -39,19 +39,25 @@ const SkillCard = ({ title, skills, delay }) => {
 
 const Experience = () => {
   const frontendSkills = [
-    { name: 'HTML', level: 'Experienced' },
-    { name: 'CSS', level: 'Experienced' },
+    { name: 'React', level: 'Experienced' },
+    { name: 'Next.js', level: 'Intermediate' },
+    { name: 'TypeScript', level: 'Intermediate' },
     { name: 'JavaScript', level: 'Experienced' },
     { name: 'Tailwind CSS', level: 'Experienced' },
-    { name: 'TypeScript', level: 'Intermediate' },
-    { name: 'Next.js', level: 'Intermediate' },
+    { name: 'HTML & CSS', level: 'Experienced' },
+    { name: 'shadcn/ui', level: 'Intermediate' },
+    { name: 'Framer Motion', level: 'Intermediate' },
   ];
 
   const backendSkills = [
+    { name: 'Node.js', level: 'Intermediate' },
+    { name: 'Express.js', level: 'Intermediate' },
+    { name: 'REST APIs', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Intermediate' },
     { name: 'PostgreSQL', level: 'Basic' },
-    { name: 'Node JS', level: 'Intermediate' },
-    { name: 'Express JS', level: 'Intermediate' },
-    { name: 'Git', level: 'Intermediate' },
+    { name: 'Supabase', level: 'Intermediate' },
+    { name: 'Vercel Deploy', level: 'Intermediate' },
+    { name: 'Git & GitHub', level: 'Intermediate' },
   ];
 
   return (
