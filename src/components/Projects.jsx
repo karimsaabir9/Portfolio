@@ -191,33 +191,6 @@ const Projects = () => {
       githubUrl: "https://github.com/karimsaabir9/ai-image-editor",
       liveUrl: null,
     },
-    {
-      image: "/images/Photo One.png",
-      title: "Multi-Agent System",
-      description:
-        "A Next.js application that orchestrates multiple LLM agents through Inngest's durable workflows. Agents plan, delegate to tools and hand results back to the user, with retry-safe execution built in.",
-      tech: ["Next.js", "TypeScript", "Inngest", "LLM Tool Calling"],
-      githubUrl: "https://github.com/karimsaabir9/multi-agent-system",
-      liveUrl: null,
-    },
-    {
-      image: "/images/Photo Three.png",
-      title: "RAG Project",
-      description:
-        "A retrieval-augmented generation pipeline that ingests documents, chunks and embeds them, retrieves the most relevant chunks for each query, and grounds LLM answers in that context.",
-      tech: ["TypeScript", "Vector Search", "LLM", "RAG"],
-      githubUrl: "https://github.com/karimsaabir9/rag_project",
-      liveUrl: null,
-    },
-    {
-      image: "/images/Photo Two.png",
-      title: "Online Voting System",
-      description:
-        "A full-stack web application for running secure online elections, with voter registration, ballot casting, live tallying and separated admin and voter surfaces.",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Authentication"],
-      githubUrl: "https://github.com/karimsaabir9/Online-Voting-System",
-      liveUrl: null,
-    },
   ];
 
   return (
