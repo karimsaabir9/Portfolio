@@ -155,30 +155,40 @@ const Projects = () => {
   // Set liveUrl to null (or omit) if a project is not yet deployed — the "Live" button hides.
   const projectsData = [
     {
+      image: "/images/Photo Three.png",
+      title: "Pomodoro",
+      description:
+        "A modern Pomodoro timer application that helps users stay focused, track work sessions, and build consistent productivity habits through structured work and break intervals.",
+      tech: [
+        "Next.js 16",
+        "tRPC",
+        "Better Auth",
+        "Drizzle ORM",
+        "Neon",
+        "TanStack Query",
+        "Tailwind CSS",
+        "shadcn/ui",
+      ],
+      githubUrl: "https://github.com/karimsaabir9/Pomodoro",
+      liveUrl: "https://pomodoro-sand-pi-68.vercel.app/",
+    },
+    {
       image: "/images/Photo One.png",
+      title: "Blogify CMS",
+      description:
+        "A modern full-stack content management system built with React, Supabase, and Tailwind CSS. It features a rich text editor, image uploads, role-based access and real-time database updates.",
+      tech: ["React", "Supabase", "Tailwind", "Framer Motion"],
+      githubUrl:
+        "https://github.com/karimsaabir9/Blogify-A-Modern-Full-Stack-Content-Management-System-with-Supabase",
+      liveUrl: "https://blogify-a-modern-full-stack-content-pied.vercel.app/",
+    },
+    {
+      image: "/images/Photo Two.png",
       title: "Multi-Agent System",
       description:
         "A Next.js application that orchestrates multiple LLM agents through Inngest's durable workflows. Agents plan, delegate to tools and hand results back to the user, with retry-safe execution built in.",
       tech: ["Next.js", "TypeScript", "Inngest", "LLM Tool Calling", "Tailwind CSS"],
       githubUrl: "https://github.com/karimsaabir9/multi-agent-system",
-      liveUrl: null,
-    },
-    {
-      image: "/images/Photo Two.png",
-      title: "AI Image Editor",
-      description:
-        "An AI-powered image editing and generation web app that runs Google's image models through Replicate. Users submit prompts, the app orchestrates the async job, polls until the result is ready and renders the generated image inline.",
-      tech: ["Next.js", "TypeScript", "Replicate", "Google Image Models", "Tailwind CSS"],
-      githubUrl: "https://github.com/karimsaabir9/ai-image-editor",
-      liveUrl: null,
-    },
-    {
-      image: "/images/Photo Three.png",
-      title: "RAG Project",
-      description:
-        "A retrieval-augmented generation pipeline that ingests documents, chunks and embeds them, retrieves the most relevant chunks for each query, and grounds LLM answers in that context.",
-      tech: ["TypeScript", "Vector Search", "LLM", "RAG"],
-      githubUrl: "https://github.com/karimsaabir9/rag_project",
       liveUrl: null,
     },
   ];
