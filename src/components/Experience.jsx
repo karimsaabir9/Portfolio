@@ -45,8 +45,8 @@ const Experience = () => {
     { name: 'JavaScript', level: 'Experienced' },
     { name: 'Tailwind CSS', level: 'Experienced' },
     { name: 'HTML & CSS', level: 'Experienced' },
-    { name: 'shadcn/ui', level: 'Intermediate' },
-    { name: 'Framer Motion', level: 'Intermediate' },
+    { name: 'shadcn/ui', level: 'Experienced' },
+    { name: 'Framer Motion', level: 'Experienced' },
   ];
 
   const backendSkills = [
@@ -55,9 +55,9 @@ const Experience = () => {
     { name: 'REST APIs', level: 'Experienced' },
     { name: 'MongoDB', level: 'Experienced' },
     { name: 'Git & GitHub', level: 'Experienced' },
-    { name: 'PostgreSQL', level: 'Intermediate' },
-    { name: 'Supabase', level: 'Intermediate' },
-    { name: 'Vercel Deploy', level: 'Intermediate' },
+    { name: 'PostgreSQL', level: 'Experienced' },
+    { name: 'Supabase', level: 'Experienced' },
+    { name: 'Vercel Deploy', level: 'Experienced' },
   ];
 
   return (
