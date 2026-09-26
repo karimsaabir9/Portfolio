@@ -189,7 +189,7 @@ const Projects = () => {
         "A Next.js application that orchestrates multiple LLM agents through Inngest's durable workflows. Agents plan, delegate to tools and hand results back to the user, with retry-safe execution built in.",
       tech: ["Next.js", "TypeScript", "Inngest", "LLM Tool Calling", "Tailwind CSS"],
       githubUrl: "https://github.com/karimsaabir9/multi-agent-system",
-      liveUrl: null,
+      liveUrl: "https://multi-agent-system-mocha.vercel.app/",
     },
   ];
 
